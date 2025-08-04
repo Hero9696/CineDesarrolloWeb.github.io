@@ -3,6 +3,16 @@ let nombres=[];
 let amigo=document.getElementById("amigo");
 let boton=document.getElementById("botonagregar");
 
+amigo.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault(); // evita que se recargue el formulario si estuviera en uno
+        agregarAmigo();
+    }
+});
+
+boton.addEventListener("click", agregarAmigo);
+
+
 function agregarAmigo() {
     if (amigo.value.trim() !== "") {
         nombres.push(amigo.value.trim());

@@ -1,3 +1,0 @@
-#  Proyecto: Cartelera De Cine
-
-
